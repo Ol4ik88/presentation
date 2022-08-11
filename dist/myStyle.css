@@ -20,6 +20,15 @@
   min-height: 120px;
   margin: 10px;
 }
+.box1 {
+  background: rgb(5, 68, 77);
+}
+.box2 {
+  background: rgb(52, 11, 105);
+}
+.box3 {
+  background: rgb(221, 117, 20);
+}
 .arrow .arrow-img {
   width: 100px;
   height: 55px;

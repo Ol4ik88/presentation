@@ -52,8 +52,7 @@
           <h3>implementation</h3>
           <div class="wrap-flex-col">
             <a href="#">
-              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1"
-                style="background: rgb(39, 121, 19)">
+              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1">
                 View (UI)
               </div>
             </a>
@@ -62,10 +61,10 @@
                 sends<br>user<br>commands
               </p>
               <div class="arrow arrow-left fragment" data-fragment-index="2">
-                <img class="arrow-img" src="src/img/ar.png">
+                <img class="arrow-img" src="./src/img/ar.png">
               </div>
               <div class="arrow arrow-right fragment" data-fragment-index="6">
-                <img class="arrow-img" src="src/img/ar.png">
+                <img class="arrow-img" src="./src/img/ar.png">
               </div>
               <p class="fragment" data-fragment-index="6">
                 reports<br>model<br>changes
@@ -73,18 +72,16 @@
             </div>
             <div class="wrap-flex-row">
               <a href="#">
-                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2"
-                  style="background: rgb(177, 58, 177)">
+                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2">
                   Controller (control logic)
                 </div>
               </a>
               <div class="arrow fragment" data-fragment-index="4">
                 <p class="fragment" data-fragment-index="4">affects the model</p>
-                <img class="arrow-img" src="src/img/ar.png">
+                <img class="arrow-img" src="./src/img/ar.png">
               </div>
               <a href="#">
-                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3"
-                  style="background: rgb(55, 0, 255)">
+                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3">
                   Model (data structure)
                 </div>
               </a>
@@ -109,8 +106,7 @@
           <h3>MVP</h3>
           <div class="wrap-flex-col">
             <a href="#">
-              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1"
-                style="background: rgb(39, 121, 19)">
+              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1">
                 View
                 (presenter)
               </div>
@@ -120,10 +116,10 @@
                 sends<br>user<br>commands
               </p>
               <div class="arrow arrow-left fragment" data-fragment-index="2">
-                <img class="arrow-img" src="src/img/ar.png">
+                <img class="arrow-img" src="./src/img/ar.png">
               </div>
               <div class="arrow arrow-right-rev fragment" data-fragment-index="7">
-                <img class="arrow-img" src="src/img/ar.png">
+                <img class="arrow-img" src="./src/img/ar.png">
               </div>
               <p class="fragment" data-fragment-index="7">
                 updates<br>the view
@@ -131,8 +127,7 @@
             </div>
             <div class="wrap-flex-row">
               <a href="#">
-                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2"
-                  style="background: rgb(177, 58, 177)">
+                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2">
                   Presenter
                   (model
                   IView)
@@ -144,16 +139,15 @@
                 </p>
                 <div class="arrow arrow-rev fragment" data-fragment-index="6">
 
-                  <img class="arrow-img" src="src/img/ar.png">
+                  <img class="arrow-img" src="./src/img/ar.png">
                 </div>
                 <div class="arrow fragment" data-fragment-index="4">
-                  <img class="arrow-img" src="src/img/ar.png">
+                  <img class="arrow-img" src="./src/img/ar.png">
                 </div>
                 <p class="fragment" data-fragment-index="4">affects the model</p>
               </div>
               <a href="#">
-                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3"
-                  style="background: rgb(55, 0, 255)">
+                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3">
                   Model
                 </div>
               </a>
@@ -170,13 +164,9 @@
   <script src="plugin/markdown/markdown.js"></script>
   <script src="plugin/highlight/highlight.js"></script>
   <script>
-    // More info about initialization & config:
-    // - https://revealjs.com/initialization/
-    // - https://revealjs.com/config/
-    Reveal.initialize({
+      Reveal.initialize({
       hash: true,
 
-      // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
     });
   </script>
