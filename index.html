@@ -1,40 +1,185 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
+  <link rel="stylesheet" href="dist/myStyle.css">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/league.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Design patterns MVC</h1>
+      </section>
+      <section>
+        <section>
+          <h2>Pattern definition</h2>
+        </section>
+        <section>
+          <h3>A design pattern or programming pattern</h3>
+          <p class="fragment">is a typical way of solving common problems in software development.</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Pattern MVC</h2>
+        </section>
+        <section>
+          <h3>MVC (Model-View-Controller)</h3>
+          <p class="fragment">is a fundamental design pattern whose purpose is to separate user interface logic from
+            programming logic</p>
+        </section>
+        <section>
+          <h3>The concept of the MVC</h3>
+          <ul>
+            <li class="fragment highlight-current-green">Model: Manages data and business logic</li>
+            <li class="fragment highlight-current-green">View: Handles layout and display</li>
+            <li class="fragment highlight-current-green">Controller: Routes commands to the model and view parts</li>
+          </ul>
+        </section>
+        <section>
+          <h3>implementation</h3>
+          <div class="wrap-flex-col">
+            <a href="#">
+              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1"
+                style="background: rgb(39, 121, 19)">
+                View (UI)
+              </div>
+            </a>
+            <div class="wrap-flex-row">
+              <p class="fragment" data-fragment-index="2">
+                sends<br>user<br>commands
+              </p>
+              <div class="arrow arrow-left fragment" data-fragment-index="2">
+                <img class="arrow-img" src="src/img/ar.png">
+              </div>
+              <div class="arrow arrow-right fragment" data-fragment-index="6">
+                <img class="arrow-img" src="src/img/ar.png">
+              </div>
+              <p class="fragment" data-fragment-index="6">
+                reports<br>model<br>changes
+              </p>
+            </div>
+            <div class="wrap-flex-row">
+              <a href="#">
+                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2"
+                  style="background: rgb(177, 58, 177)">
+                  Controller (control logic)
+                </div>
+              </a>
+              <div class="arrow fragment" data-fragment-index="4">
+                <p class="fragment" data-fragment-index="4">affects the model</p>
+                <img class="arrow-img" src="src/img/ar.png">
+              </div>
+              <a href="#">
+                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3"
+                  style="background: rgb(55, 0, 255)">
+                  Model (data structure)
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Data stream</h3>
+          <ul>
+            <li class="fragment highlight-current-green">passed from the user to the view</li>
+            <li class="fragment highlight-current-green">from the view to the controller</li>
+            <li class="fragment highlight-current-green">the model is updated through the controller</li>
+            <li class="fragment highlight-current-green">the model notifies the view that something has changed</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Model-View-Presenter</h2>
+        </section>
+        <section>
+          <h3>MVP</h3>
+          <div class="wrap-flex-col">
+            <a href="#">
+              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1"
+                style="background: rgb(39, 121, 19)">
+                View
+                (presenter)
+              </div>
+            </a>
+            <div class="wrap-flex-row wrap-left">
+              <p class="fragment" data-fragment-index="2">
+                sends<br>user<br>commands
+              </p>
+              <div class="arrow arrow-left fragment" data-fragment-index="2">
+                <img class="arrow-img" src="src/img/ar.png">
+              </div>
+              <div class="arrow arrow-right-rev fragment" data-fragment-index="7">
+                <img class="arrow-img" src="src/img/ar.png">
+              </div>
+              <p class="fragment" data-fragment-index="7">
+                updates<br>the view
+              </p>
+            </div>
+            <div class="wrap-flex-row">
+              <a href="#">
+                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2"
+                  style="background: rgb(177, 58, 177)">
+                  Presenter
+                  (model
+                  IView)
+                </div>
+              </a>
+              <div class="wrap-flex-col">
+                <p class="fragment" data-fragment-index="6">
+                  reports model changes
+                </p>
+                <div class="arrow arrow-rev fragment" data-fragment-index="6">
+
+                  <img class="arrow-img" src="src/img/ar.png">
+                </div>
+                <div class="arrow fragment" data-fragment-index="4">
+                  <img class="arrow-img" src="src/img/ar.png">
+                </div>
+                <p class="fragment" data-fragment-index="4">affects the model</p>
+              </div>
+              <a href="#">
+                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3"
+                  style="background: rgb(55, 0, 255)">
+                  Model
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>

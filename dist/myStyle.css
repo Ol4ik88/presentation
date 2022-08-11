@@ -1,0 +1,44 @@
+.wrap-flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.wrap-flex-row p {
+  min-width: 175px;
+  font-size: 26px;
+}
+.wrap-flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  min-height: 120px;
+  margin: 10px;
+}
+.arrow .arrow-img {
+  width: 100px;
+  height: 55px;
+  margin: 0;
+}
+.arrow-left {
+transform: rotate(125deg);
+
+}
+.arrow-right {
+  transform: rotate(-125deg);
+}
+.arrow-rev{
+  transform: rotate(180deg);
+}
+.arrow-right-rev {
+  transform: rotate(-55deg);
+}
+.wrap-left {
+margin-left: -340px;
+gap:0;
+}
