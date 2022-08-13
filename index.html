@@ -20,7 +20,7 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <h1>Design patterns MVC</h1>
+        <h1>Design patterns. MVC</h1>
       </section>
       <section>
         <section>
@@ -36,10 +36,16 @@
           <h2>Pattern MVC</h2>
         </section>
         <section>
-          <h3>MVC (Model-View-Controller)</h3>
-          <p class="fragment">is a fundamental design pattern whose purpose is to separate user interface logic from
-            programming logic</p>
+          <h3>Pattern modifications</h3>
+          <ul>
+            <li class="fragment highlight-current-green">Model-View-Presenter</li>
+            <li class="fragment highlight-current-green">Model-View-View Model</li>
+          </ul>
         </section>
+        <section>
+          <h3>MVC (Model-View-Controller)</h3>
+          <p class="fragment">is a fundamental design pattern whose purpose is to separate user's interface logic from programming logic</p>
+        </section>        
         <section>
           <h3>The concept of the MVC</h3>
           <ul>
@@ -89,73 +95,30 @@
           </div>
         </section>
         <section>
+          <h3>Possible difficulties</h3>
+          <ul>
+            <li class="fragment highlight-current-green">Should some code be assigned to the view or the controller?</li>
+            <li class="fragment highlight-current-green">How much should the controller know?</li>
+          </ul>
+        </section>
+        <section>
           <h3>Data stream</h3>
           <ul>
             <li class="fragment highlight-current-green">passed from the user to the view</li>
             <li class="fragment highlight-current-green">from the view to the controller</li>
-            <li class="fragment highlight-current-green">the model is updated through the controller</li>
+            <li class="fragment highlight-current-green">the model is updated by the controller</li>
             <li class="fragment highlight-current-green">the model notifies the view that something has changed</li>
           </ul>
         </section>
-      </section>
-      <section>
         <section>
-          <h2>Model-View-Presenter</h2>
-        </section>
-        <section>
-          <h3>MVP</h3>
-          <div class="wrap-flex-col">
-            <a href="#">
-              <div class="box box1 fragment r-frame" data-fragment-index="1" data-id="box1">
-                View
-                (presenter)
-              </div>
-            </a>
-            <div class="wrap-flex-row wrap-left">
-              <p class="fragment" data-fragment-index="2">
-                sends<br>user<br>commands
-              </p>
-              <div class="arrow arrow-left fragment" data-fragment-index="2">
-                <img class="arrow-img" src="./src/img/ar.png">
-              </div>
-              <div class="arrow arrow-right-rev fragment" data-fragment-index="7">
-                <img class="arrow-img" src="./src/img/ar.png">
-              </div>
-              <p class="fragment" data-fragment-index="7">
-                updates<br>the view
-              </p>
-            </div>
-            <div class="wrap-flex-row">
-              <a href="#">
-                <div class="box box2 fragment r-frame" data-fragment-index="3" data-id="box2">
-                  Presenter
-                  (model
-                  IView)
-                </div>
-              </a>
-              <div class="wrap-flex-col">
-                <p class="fragment" data-fragment-index="6">
-                  reports model changes
-                </p>
-                <div class="arrow arrow-rev fragment" data-fragment-index="6">
-
-                  <img class="arrow-img" src="./src/img/ar.png">
-                </div>
-                <div class="arrow fragment" data-fragment-index="4">
-                  <img class="arrow-img" src="./src/img/ar.png">
-                </div>
-                <p class="fragment" data-fragment-index="4">affects the model</p>
-              </div>
-              <a href="#">
-                <div class="box box3 fragment r-frame" data-fragment-index="5" data-id="box3">
-                  Model
-                </div>
-              </a>
-            </div>
-          </div>
+          <h3>In conclusion</h3>
+          <ul>
+            <li class="fragment highlight-current-green">The controller determines which view should be displayed at the moment.</li>
+            <li class="fragment highlight-current-green">View events can only affect the controller. The controller can affect the model and define a different view</li>
+            <li class="fragment highlight-current-green">Several views are possible for only one controller</li>
+          </ul>
         </section>
       </section>
-
     </div>
   </div>
 
